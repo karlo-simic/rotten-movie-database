@@ -1,0 +1,31 @@
+@use "styles/config" as *;
+.card {
+  display: flex;
+  gap: 1.5rem;
+}
+.poster {
+  aspect-ratio: 2/3;
+  height: 16rem;
+  border-radius: $radius;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h5 {
+    margin-bottom: 0.8rem;
+  }
+}
+.meta {
+  color: $clr-secondary;
+  @include list-inline-dots;
+}
+.overview {
+  display: none;
+
+  @include trunc-text(3);
+  @include respond(sm) {
+    display: -webkit-box; // For ellipsis to work
+  }
+}

@@ -1,0 +1,76 @@
+@use "config" as *;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+html {
+  font-size: 56.25%; // 1rem = 9px
+
+  @include respond(md) {
+    font-size: 62.5%; // 1rem = 10px
+  }
+
+  // Custom scrollbar
+  &::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+
+    &-track {
+      background: transparent;
+    }
+
+    &-thumb {
+      background: $clr-gray-3;
+
+      &:hover {
+        background: $clr-gray-4;
+      }
+    }
+  }
+}
+body {
+  background-color: $body-bg;
+  color: $body-clr;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  isolation: isolate;
+}
+button,
+select {
+  cursor: pointer;
+}
+button {
+  background: none;
+  border: none;
+  color: $body-clr;
+}
+
+select {
+  background-color: $clr-gray-1;
+  color: $clr-white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: $radius;
+  @include focus-outline-effect($clr-secondary);
+}

@@ -1,0 +1,15 @@
+@use "styles/config" as *;
+
+.voteAverage {
+  color: $clr-primary;
+  display: inline-block;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: $font-size-sm;
+  }
+}

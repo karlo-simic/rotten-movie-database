@@ -1,0 +1,11 @@
+@use "styles/config" as *;
+
+.youTube {
+  width: 100%;
+  aspect-ratio: 16/9;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}

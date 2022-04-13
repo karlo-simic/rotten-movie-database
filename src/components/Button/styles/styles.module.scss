@@ -1,0 +1,125 @@
+@use "styles/config" as *;
+
+@mixin full($clr) {
+  // Text color
+  @if $clr == $clr-primary {
+    color: $clr-black;
+  }
+  @if $clr == $clr-secondary {
+    color: $clr-white;
+  }
+
+  background-color: $clr;
+
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: light($clr);
+  }
+  &:active:not(:disabled) {
+    background-color: dark($clr);
+  }
+
+  @include focus-outline-effect($clr);
+}
+
+@mixin outline($clr) {
+  background-color: transparent;
+  color: $clr;
+  border: $border;
+  border-color: $clr;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $clr;
+
+    // Text color
+    @if $clr == $clr-primary {
+      color: $clr-black;
+    }
+    @if $clr == $clr-secondary {
+      color: $clr-white;
+    }
+    @if $clr == $clr-ternary {
+      color: $clr-black;
+    }
+  }
+
+  &:active:not(:disabled) {
+    background-color: light($clr);
+  }
+
+  @include focus-outline-effect($clr);
+}
+
+@mixin shadow($clr) {
+  &:hover {
+    color: $clr;
+    background-color: rgba($clr-black, 25%);
+    box-shadow: $shadow-md;
+  }
+  &:active {
+    box-shadow: $shadow-bg;
+    color: $clr-white;
+  }
+}
+
+.button {
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: $transition;
+  user-select: none;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &.primary {
+    @include full($clr-primary);
+  }
+  &.secondary {
+    @include full($clr-secondary);
+  }
+  &.ternary {
+    @include full($clr-ternary);
+  }
+
+  &.outline-primary {
+    @include outline($clr-primary);
+  }
+  &.outline-secondary {
+    @include outline($clr-secondary);
+  }
+  &.outline-ternary {
+    @include outline($clr-ternary);
+  }
+
+  &.shadow-primary {
+    @include shadow($clr-primary);
+  }
+  &.shadow-secondary {
+    @include shadow($clr-secondary);
+  }
+  &.shadow-ternary {
+    @include shadow($clr-ternary);
+  }
+}

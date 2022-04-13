@@ -1,0 +1,32 @@
+@use "styles/config" as *;
+
+@keyframes glow-effect {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.spinner {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 0.7rem;
+}
+
+.glow {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: $clr-white;
+  border-radius: 9999px;
+  animation-name: glow-effect;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

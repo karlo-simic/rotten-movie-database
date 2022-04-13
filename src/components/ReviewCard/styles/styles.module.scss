@@ -1,0 +1,38 @@
+@use "styles/config" as *;
+
+.review {
+  max-width: 40rem;
+}
+.header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.info {
+  p {
+    color: $clr-secondary;
+  }
+}
+.vote {
+  color: $clr-primary;
+
+  svg {
+    margin-right: 0.8rem;
+  }
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+}
+.avatar {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: $radius-rounded;
+  object-fit: cover;
+}
+.body {
+  &.trunc {
+    @include trunc-text(6);
+  }
+}

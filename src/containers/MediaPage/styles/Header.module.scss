@@ -1,0 +1,101 @@
+@use "styles/config" as *;
+
+.header {
+  margin-bottom: 4rem;
+}
+.container {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* 
+Poster & Trailer
+*/
+
+.multimedia {
+  margin-bottom: 2rem;
+  @include respond(sm) {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.trailer {
+  width: 100%;
+  aspect-ratio: 16/9;
+  @include respond(sm) {
+    width: 100%;
+    aspect-ratio: auto;
+  }
+}
+.poster {
+  display: none;
+  @include respond(sm) {
+    display: block;
+  }
+}
+
+/* 
+Title, meta, genres..
+*/
+
+.main {
+  @include respond(lg) {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.titleMetaCont {
+  margin-bottom: 4rem;
+  @include respond(lg) {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  margin-bottom: 2rem;
+}
+
+.metaContainer {
+  @include respond(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.meta {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  align-items: center;
+  @include respond(lg) {
+    margin-bottom: 0;
+  }
+}
+
+// Ratings, Links, Watchlist
+.statsLinksCont {
+  display: flex;
+  flex-direction: column;
+  @include respond(lg) {
+    justify-content: space-between;
+  }
+}
+.stats {
+  align-self: center;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 3rem;
+
+  @include respond(lg) {
+    align-self: end;
+    margin-bottom: 0;
+    order: 1;
+  }
+}

@@ -1,0 +1,31 @@
+@use "styles/config" as *;
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 2rem;
+  align-items: center;
+  border-radius: $radius;
+  background-color: $body-bg;
+  color: $clr-secondary;
+  border: none;
+  @include focus-outline-effect($clr-secondary);
+  margin-bottom: 2rem;
+  border: 1px solid $clr-secondary;
+}
+.title {
+  text-transform: capitalize;
+}
+.caret {
+  transition: $transition;
+  &.up {
+    transform: rotate(180deg);
+  }
+}
+.collapse {
+  padding: 0 2rem;
+  transition: $transition;
+  overflow: hidden;
+  width: 100%;
+}

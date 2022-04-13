@@ -1,0 +1,23 @@
+@use "styles/config" as *;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  @include respond(md) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+
+.btn {
+  width: 100%;
+
+  @include respond(md) {
+    text-align: center;
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+  }
+}

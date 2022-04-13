@@ -1,0 +1,45 @@
+@use "styles/config" as *;
+
+.links {
+  @include hidden-scrollbar;
+  padding: 1.2rem 2rem;
+  border: 1px solid $clr-gray-3;
+  border-radius: $radius;
+  overflow-x: scroll;
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  li {
+    flex-shrink: 0;
+  }
+
+  a {
+    color: $clr-secondary;
+
+    &:hover {
+      color: light($clr-secondary);
+    }
+    &:active {
+      color: dark($clr-secondary);
+    }
+  }
+  svg {
+    font-size: $icon-size-sm;
+  }
+
+  @include respond(lg) {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    overflow-x: initial;
+    ul {
+      flex-wrap: wrap;
+      justify-content: end;
+    }
+  }
+}

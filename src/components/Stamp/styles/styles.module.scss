@@ -1,0 +1,32 @@
+@use "styles/config" as *;
+
+@mixin full($clr) {
+  background-color: $clr;
+}
+
+@mixin outline($clr) {
+  border: $border;
+  border-color: $clr;
+  color: $clr;
+  background-color: transparent;
+}
+
+.stamp {
+  padding: 1px 1rem;
+  display: inline-block;
+  border-radius: $radius;
+
+  &.primary {
+    @include full($clr-primary);
+  }
+  &.secondary {
+    @include full($clr-secondary);
+  }
+
+  &.outline-primary {
+    @include outline($clr-primary);
+  }
+  &.outline-secondary {
+    @include outline($clr-secondary);
+  }
+}

@@ -1,0 +1,19 @@
+@use "styles/config" as *;
+
+.group {
+  margin-bottom: 3rem;
+}
+
+.loading {
+  height: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: $clr-primary;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}

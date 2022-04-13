@@ -1,0 +1,37 @@
+@use "styles/config" as *;
+
+.container {
+  // Container exists to be a relative position for the buttons
+  position: relative;
+}
+
+.carousel {
+  // Wrapper around content
+  overflow-x: scroll;
+  @include hidden-scrollbar;
+}
+
+.content {
+  // Horizontal list of passed in elements
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+
+  @media screen and (hover: none) {
+    display: none;
+  }
+}
+.leftBtn {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+.rightBtn {
+  right: 0;
+  transform: translate(50%, -50%);
+}

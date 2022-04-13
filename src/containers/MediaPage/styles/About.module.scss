@@ -1,0 +1,18 @@
+@use "styles/config" as *;
+
+.info {
+  &:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+.list {
+  margin-bottom: 2rem;
+}
+.name {
+  color: $clr-secondary;
+  text-transform: capitalize;
+  margin-right: 1rem;
+}
+.overview {
+  margin-bottom: 2rem;
+}

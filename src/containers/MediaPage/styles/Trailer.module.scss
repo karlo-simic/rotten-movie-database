@@ -1,0 +1,38 @@
+@use "styles/config" as *;
+
+.container {
+  border-radius: $radius;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  @include position-spread(absolute);
+  background: linear-gradient(
+    180deg,
+    rgba($clr-black, 0) 0%,
+    rgba($clr-black, 0.66) 100%
+  );
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.backdropFallback {
+  height: 100%;
+  width: 100%;
+  background-color: $clr-gray-3;
+}
+
+.btn {
+  @include position-center(absolute);
+  font-size: 5rem;
+}
+
+.message {
+  @include position-center(absolute);
+}

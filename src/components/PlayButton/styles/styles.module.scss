@@ -1,0 +1,16 @@
+@use "styles/config" as *;
+
+.btn {
+  opacity: 0.5;
+  transition: $transition;
+  background: none;
+  border: none;
+  color: $clr-white;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.9;
+  }
+}

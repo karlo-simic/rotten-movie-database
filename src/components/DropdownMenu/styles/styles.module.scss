@@ -1,0 +1,40 @@
+@use "styles/config" as *;
+
+.dropdown {
+  position: relative;
+}
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: $clr-white;
+  padding: 0.5rem 0;
+  border-radius: $radius;
+  min-width: 15rem;
+  right: 0;
+  bottom: -1rem;
+  transform: translateY(100%);
+  flex-direction: column;
+  z-index: 5;
+  &.show {
+    display: flex;
+  }
+
+  > * {
+    color: $clr-black;
+    text-align: start;
+    padding: 0.5rem 1rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $clr-gray-7;
+    }
+
+    &[data-button] {
+      &:hover {
+        background-color: $clr-gray-8;
+      }
+      &:active {
+        background-color: dark($clr-gray-8);
+      }
+    }
+  }
+}

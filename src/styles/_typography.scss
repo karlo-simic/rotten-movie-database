@@ -1,0 +1,87 @@
+@use "config" as *;
+
+// font-family: 'Open Sans', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
+
+// font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  font-size: $font-size-default;
+  font-weight: $font-weight-regular;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $body-clr;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-header;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+h4 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+h5 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+h6 {
+  font-size: 1.6rem;
+}
+
+@include respond(sm) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@include respond(lg) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2.2rem;
+  }
+}

@@ -1,0 +1,47 @@
+@use "styles/config" as *;
+
+.modal {
+  @include position-spread(fixed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  @include position-spread(fixed);
+  background: rgba($clr-black, 0.9);
+  z-index: 50;
+}
+
+.closeBtn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  color: darker($clr-white);
+  border: none;
+  font-size: 2.5rem;
+  z-index: 52;
+
+  &:hover {
+    color: $clr-white;
+  }
+  &:active {
+    color: darker($clr-white);
+  }
+}
+
+.image,
+.video {
+  z-index: 51;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.video {
+  max-width: 100rem;
+}

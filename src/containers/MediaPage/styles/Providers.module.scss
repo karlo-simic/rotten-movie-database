@@ -1,0 +1,13 @@
+@use "styles/config" as *;
+
+.credit {
+  color: $clr-secondary;
+  font-size: $font-size-sm;
+  margin-bottom: 2rem;
+}
+.item {
+  display: inline-block;
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}

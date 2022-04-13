@@ -1,0 +1,19 @@
+@use "styles/config" as *;
+
+.container {
+  border-radius: $radius;
+  overflow: hidden;
+  flex: 0 0 25%;
+  aspect-ratio: 2/3;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.fallback {
+  height: 100%;
+  width: 100%;
+}

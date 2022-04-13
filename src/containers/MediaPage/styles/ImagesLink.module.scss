@@ -1,0 +1,22 @@
+@use "styles/config" as *;
+
+.galleryLink {
+  position: relative;
+
+  h4 {
+    @include position-center(absolute);
+    z-index: 1;
+    transition: $transition;
+  }
+
+  &:hover {
+    h4 {
+      color: $clr-ternary;
+    }
+  }
+}
+
+.overlay {
+  @include position-spread(absolute);
+  background: rgba($clr-black, 0.75);
+}

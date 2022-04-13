@@ -1,0 +1,28 @@
+@use "styles/config" as *;
+
+.card {
+  display: flex;
+  gap: 1rem;
+
+  img {
+    width: 6rem;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: $radius;
+  }
+
+  p {
+    color: $clr-secondary;
+  }
+
+  h6,
+  p {
+    @include trunc-text(2);
+  }
+
+  @include respond(md) {
+    img {
+      width: 10rem;
+    }
+  }
+}

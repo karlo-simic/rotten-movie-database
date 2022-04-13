@@ -1,0 +1,17 @@
+@use "styles/config" as *;
+
+.btn {
+  background: rgba($clr-gray-1, 0.9);
+  border: none;
+  border-radius: $radius-rounded;
+  color: $clr-gray-5;
+  padding: 1.6rem;
+  line-height: 0;
+  transition-property: background, visibility, opacity;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    color: $clr-white;
+    background: rgba($clr-gray-1, 1);
+  }
+}

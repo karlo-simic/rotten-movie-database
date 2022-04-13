@@ -1,0 +1,18 @@
+@use "styles/config" as *;
+
+.genres {
+  @include hidden-scrollbar;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 1rem;
+
+  > * {
+    flex-shrink: 0;
+  }
+
+  @include respond(md) {
+    flex-wrap: wrap;
+    overflow-x: initial;
+  }
+}

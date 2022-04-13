@@ -1,0 +1,43 @@
+.fade {
+  &-enter {
+    opacity: 0;
+  }
+  &-enter-active {
+    opacity: 1;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+  }
+}
+.slide-from-left {
+  &-enter {
+    transform: translateX(-100%);
+  }
+  &-enter-active {
+    transform: translateX(0);
+  }
+  &-exit {
+    transform: translateX(0);
+  }
+  &-exit-active {
+    transform: translateX(-100%);
+  }
+}
+.alert {
+  &-enter {
+    transform: translate(-50%, -120%) !important;
+  }
+  &-enter-active {
+    transform: translate(-50%, 0) !important;
+  }
+  &-exit {
+    transform: translate(-50%, 0) !important;
+  }
+  &-exit-active {
+    transform: translate(-50%, -120%) !important;
+    opacity: 0;
+  }
+}

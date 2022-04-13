@@ -1,0 +1,32 @@
+@use "styles/config" as *;
+
+.card {
+  // width: 20rem;
+  display: block;
+
+  @include respond(md) {
+    // width: 25rem;
+  }
+}
+.thumbnailContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: $radius;
+  overflow: hidden;
+}
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.play {
+  @include position-center(absolute);
+  font-size: 3rem;
+  @include respond(md) {
+    font-size: 4rem;
+  }
+}
+.title {
+  font-size: $font-size-sm;
+  @include trunc-text(2);
+}

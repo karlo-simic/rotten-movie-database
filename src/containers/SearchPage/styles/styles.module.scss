@@ -1,0 +1,32 @@
+@use "styles/config" as *;
+
+.responsive {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 4rem;
+  gap: 5rem;
+
+  @include respond(lg) {
+    grid-template-columns: auto 1fr;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.title {
+  text-transform: capitalize;
+}
+.error {
+  color: $clr-secondary;
+}
+.list {
+  margin: 2rem 0;
+}
+.centerSpinner {
+  text-align: center;
+}

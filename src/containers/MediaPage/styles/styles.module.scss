@@ -1,0 +1,15 @@
+@use "styles/config" as *;
+
+.grid {
+  display: grid;
+  column-gap: 2rem;
+  grid-template-columns: 100%;
+
+  @include respond(lg) {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+.fallback {
+  height: 100vh;
+}

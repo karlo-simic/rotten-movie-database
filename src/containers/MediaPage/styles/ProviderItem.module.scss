@@ -1,0 +1,10 @@
+@use "styles/config" as *;
+
+.provider {
+  display: inline-block;
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: $radius;
+  }
+}

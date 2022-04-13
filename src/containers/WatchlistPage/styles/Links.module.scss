@@ -1,0 +1,12 @@
+@use "styles/config" as *;
+
+.link {
+  color: $clr-primary;
+  &:first-child {
+    margin-right: 2rem;
+  }
+
+  &.active {
+    color: lighten($clr-primary, 40%);
+  }
+}

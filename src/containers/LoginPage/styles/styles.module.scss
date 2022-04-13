@@ -1,0 +1,14 @@
+@use "styles/config" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 3rem;
+  text-align: center;
+  a {
+    color: $clr-ternary;
+  }
+}

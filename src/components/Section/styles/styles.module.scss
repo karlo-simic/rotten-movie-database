@@ -1,0 +1,32 @@
+@use "styles/config" as *;
+
+.section {
+  margin-bottom: 5rem;
+
+  h4 {
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+}
+
+.header {
+  margin-bottom: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @include respond(lg) {
+    justify-content: start;
+  }
+}
+
+.link {
+  color: $clr-ternary;
+  &:hover {
+    color: light($clr-ternary);
+  }
+  &:active {
+    color: dark($clr-ternary);
+  }
+}

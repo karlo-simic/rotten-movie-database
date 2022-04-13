@@ -1,0 +1,40 @@
+@use "styles/config" as *;
+
+.header {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.responsive {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.posterContainer {
+  display: block;
+
+  img {
+    height: 13.8rem;
+    aspect-ratio: 2/3;
+  }
+}
+
+.mediaLink {
+  font-weight: 500;
+  color: $clr-ternary;
+  margin-bottom: 1rem;
+  display: block;
+
+  span {
+    color: $clr-secondary;
+  }
+}
+
+.title {
+  font-weight: 500;
+  text-transform: capitalize;
+
+  span {
+    color: $clr-secondary;
+  }
+}

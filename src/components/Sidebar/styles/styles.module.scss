@@ -1,0 +1,44 @@
+@use "styles/config" as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 30rem;
+  box-shadow: 5px 0 15px rgba($clr-black, 0.5);
+  transition: $transition;
+}
+.header {
+  text-align: end;
+  padding: 1rem 1rem;
+  background-color: $clr-gray-1;
+  svg {
+    font-size: $icon-size;
+  }
+}
+.body {
+  background-color: $clr-gray-1;
+  height: 100%;
+  padding: 2rem 0;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    transition: $transition;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: start;
+    &:hover {
+      padding-left: 3rem;
+      background-color: rgba($clr-black, 0.5);
+      color: $clr-ternary;
+    }
+    &:active {
+      color: light($clr-ternary);
+    }
+  }
+}

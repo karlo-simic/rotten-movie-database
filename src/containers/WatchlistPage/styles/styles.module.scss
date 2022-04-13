@@ -1,0 +1,25 @@
+@use "styles/config" as *;
+
+.container {
+  padding: 3rem 0;
+}
+.links {
+  margin-bottom: 2rem;
+}
+.pagination {
+  display: block;
+  text-align: center;
+}
+
+.sort,
+.results {
+  margin-bottom: 4rem;
+}
+.fallback {
+  text-align: center;
+  color: $clr-secondary;
+  text-transform: uppercase;
+}
+.spinnerContainer {
+  text-align: center;
+}

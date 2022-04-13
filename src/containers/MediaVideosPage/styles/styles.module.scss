@@ -1,0 +1,11 @@
+@use "styles/config" as *;
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.5rem;
+
+  @include respond(lg) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}

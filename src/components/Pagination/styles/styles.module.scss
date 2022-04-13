@@ -1,0 +1,9 @@
+@use "styles/config" as *;
+
+.pagination {
+  display: block;
+  h6 {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+}

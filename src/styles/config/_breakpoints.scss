@@ -1,0 +1,49 @@
+@use "functions" as *;
+
+/* 
+
+BREAKPOINT MANAGER
+
+Can take number of pixels (without 'px') and will convert it to EM,
+or it can also take one of the predefined breakpoints.
+
+Available breakpoints:
+
+0 - 425px      BASE
+425 - 476px    xs
+576 - 768px    sm
+768 - 992px    md
+992 - 1200px   lg
+1200 - 1400px  xl
+1400px ~       xll
+
+*/
+@mixin respond($breakpoint) {
+  $new-breakpoint: ();
+
+  @if type-of($breakpoint) == number {
+    $new-breakpoint: px-to-em($breakpoint);
+  }
+  @if $breakpoint == xs {
+    $new-breakpoint: px-to-em(425);
+  }
+  @if $breakpoint == sm {
+    $new-breakpoint: px-to-em(576);
+  }
+  @if $breakpoint == md {
+    $new-breakpoint: px-to-em(768);
+  }
+  @if $breakpoint == lg {
+    $new-breakpoint: px-to-em(992);
+  }
+  @if $breakpoint == xl {
+    $new-breakpoint: px-to-em(1200);
+  }
+  @if $breakpoint == xll {
+    $new-breakpoint: px-to-em(1400);
+  }
+
+  @media only screen and (min-width: $new-breakpoint) {
+    @content;
+  }
+}

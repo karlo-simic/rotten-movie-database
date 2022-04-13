@@ -1,0 +1,19 @@
+@use "styles/config" as *;
+
+.container {
+  width: 90%;
+  max-width: 140rem;
+  margin: 0 auto;
+
+  @include respond(sm) {
+    width: 80%;
+  }
+
+  @include respond(md) {
+    width: 75%;
+  }
+
+  @include respond(lg) {
+    width: 88%;
+  }
+}

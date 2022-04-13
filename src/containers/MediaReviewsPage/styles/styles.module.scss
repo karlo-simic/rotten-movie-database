@@ -1,0 +1,12 @@
+@use "styles/config" as *;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 3rem;
+
+  @include respond(lg) {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
+}

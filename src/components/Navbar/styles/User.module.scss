@@ -1,0 +1,16 @@
+@use "styles/config" as *;
+
+.button {
+  display: flex !important;
+  align-items: center;
+  gap: 0.8rem;
+  img {
+    height: 2.7rem;
+    width: 2.7rem;
+    object-fit: cover;
+  }
+}
+.username {
+  font-size: $font-size-sm;
+  color: $clr-secondary;
+}

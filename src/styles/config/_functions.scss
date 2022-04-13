@@ -1,0 +1,18 @@
+@function px-to-em($value) {
+  $em-value: calc($value / 16) + em;
+  @return $em-value;
+}
+
+// For hover, focus, click.. etc.
+@function light($clr) {
+  @return lighten($clr, 5%);
+}
+@function lighter($clr) {
+  @return lighten($clr, 10%);
+}
+@function dark($clr) {
+  @return darken($clr, 10%);
+}
+@function darker($clr) {
+  @return darken($clr, 15%);
+}

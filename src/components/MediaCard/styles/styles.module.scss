@@ -1,0 +1,36 @@
+@use "styles/config" as *;
+
+.card {
+  width: 13rem;
+  img,
+  .fallback {
+    border-radius: $radius;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+  }
+
+  @include respond(md) {
+    width: 15rem;
+  }
+}
+
+.title {
+  @include trunc-text(2);
+  text-align: center;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.year {
+  color: $clr-secondary;
+  font-size: $font-size-sm;
+}

@@ -1,0 +1,91 @@
+@use "styles/config" as *;
+
+.form {
+  background-color: $clr-white;
+  display: flex;
+
+  input,
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem 1.5rem;
+  }
+
+  input {
+    color: $clr-black;
+    flex: 1;
+    &::placeholder {
+      color: light($clr-black);
+    }
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    // Disable default input clear button
+    &::-ms-clear {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    &::-ms-reveal {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+  button {
+    transition: $transition;
+    color: light($clr-black);
+    svg {
+      font-size: $icon-size-sm;
+    }
+    &:hover {
+      color: $clr-black;
+    }
+    &:active {
+      color: lighten($clr-black, 20%);
+    }
+  }
+
+  &.desktop {
+    // Desktop version
+    border-radius: $radius;
+    max-width: 30rem;
+
+    @include focus-outline-effect($clr-gray-5);
+
+    display: none;
+    @include respond(lg) {
+      display: flex;
+    }
+  }
+
+  &.mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: $shadow-md;
+    transition: $transition;
+
+    @include respond(lg) {
+      display: none;
+    }
+
+    &:focus-within {
+      box-shadow: $shadow-bg;
+    }
+
+    button {
+      padding-right: 3rem;
+    }
+  }
+}

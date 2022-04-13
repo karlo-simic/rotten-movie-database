@@ -1,0 +1,12 @@
+@use "styles/config" as *;
+
+.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $clr-gray-4;
+
+  svg {
+    font-size: 4rem;
+  }
+}

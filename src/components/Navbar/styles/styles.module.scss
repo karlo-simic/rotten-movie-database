@@ -1,0 +1,88 @@
+@use "styles/config" as *;
+
+.navbar {
+  padding: 1.5rem 0;
+  background-color: $clr-gray-1;
+  height: 7rem;
+  position: relative;
+  @include respond(md) {
+    height: 6.5rem;
+    padding: 1.5rem 0;
+  }
+}
+
+.responsive {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100%;
+
+  @include respond(lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.left,
+.middle,
+.right {
+  height: 100%;
+}
+.middle {
+  justify-self: center;
+  display: none;
+  @include respond(lg) {
+    display: block;
+  }
+}
+.right {
+  justify-self: end;
+  gap: 2rem;
+}
+.left {
+  gap: 1rem;
+}
+
+.right,
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  display: inline-block;
+  img {
+    height: 100%;
+  }
+}
+
+.searchBtn {
+  border: none;
+  background: none;
+  color: $clr-white;
+
+  @include respond(lg) {
+    display: none;
+  }
+  &:active {
+    color: darken($clr-white, 20%);
+  }
+}
+
+.searchBtn {
+  font-size: $icon-size;
+}
+
+.links {
+  display: none;
+  margin: 0 2rem;
+  @include respond(lg) {
+    display: block;
+  }
+}
+
+.sidebarToggle {
+  @include respond(lg) {
+    display: none !important;
+  }
+}

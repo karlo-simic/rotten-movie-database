@@ -1,0 +1,45 @@
+@use "styles/config" as *;
+
+.footer {
+  padding: 2rem 0;
+  margin-top: 4rem;
+  background-color: $clr-gray-1;
+  font-size: $font-size-sm;
+
+  a {
+    :hover {
+      color: dark($clr-white);
+    }
+    :active {
+      color: darker($clr-white);
+    }
+  }
+}
+
+.container {
+  text-align: center;
+  > div {
+    margin-bottom: 2rem;
+    > *:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.socials {
+  > a {
+    display: inline-block;
+    vertical-align: middle;
+
+    &:not(:last-child) {
+      font-size: $icon-size;
+      margin-right: 3rem;
+    }
+  }
+}
+
+.credit {
+  a {
+    text-decoration: underline;
+  }
+}
