@@ -24,7 +24,10 @@ const Footer = () => {
             >
               <Linkedin />
             </a>
-            <a href="https://github.com/karlo445/movie-app" target="_blank">
+            <a
+              href="https://github.com/karlo445/rotten-movie-database"
+              target="_blank"
+            >
               Source Code
             </a>
           </div>
