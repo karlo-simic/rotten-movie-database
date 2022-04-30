@@ -55,6 +55,13 @@ svg {
 
 #root {
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  > main {
+    flex: 1;
+  }
 }
 button,
 select {

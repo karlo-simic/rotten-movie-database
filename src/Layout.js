@@ -1,4 +1,3 @@
-import c from "./Layout.module.scss";
 import { Outlet } from "react-router-dom";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
@@ -6,9 +5,9 @@ import ErrorBoundary from "components/ErrorBoundary";
 import Sidebar from "components/Sidebar";
 import Alert from "components/Alert";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
-    <div className={c.layout}>
+    <>
       <Navbar />
       <main>
         <ErrorBoundary>
@@ -19,7 +18,7 @@ const Layout = ({ children }) => {
 
       <Sidebar />
       <Alert />
-    </div>
+    </>
   );
 };
 
