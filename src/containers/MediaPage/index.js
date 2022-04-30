@@ -63,11 +63,6 @@ const MediaDetail = () => {
     );
 
   if (!loading && !error && data) {
-    // Sorry Johnny
-    if (data.adult) {
-      navigate("/not-found");
-    }
-
     const {
       backdrop_path: backdropPath,
       genres,
