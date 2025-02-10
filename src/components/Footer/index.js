@@ -1,8 +1,7 @@
 import c from "./styles/styles.module.scss";
-import xs from "classnames";
 
 import Container from "components/Container";
-import { Github, Twitter, Linkedin } from "react-bootstrap-icons";
+import { Github } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
@@ -14,15 +13,6 @@ const Footer = () => {
           <div className={c.socials}>
             <a href="https://github.com/karlo445" target="_blank">
               <Github />
-            </a>
-            <a href="https://twitter.com/karlo445" target="_blank">
-              <Twitter />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/karlo-%C5%A1imi%C4%87-309338237/"
-              target="_blank"
-            >
-              <Linkedin />
             </a>
             <a
               href="https://github.com/karlo445/rotten-movie-database"
