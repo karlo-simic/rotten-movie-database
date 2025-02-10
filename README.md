@@ -1,6 +1,6 @@
 # Rotten Movie Database 🎬
 
-[LIVE DEMO](https://rottenmoviedatabase-57162.web.app/home)
+[LIVE DEMO](https://rotten-movie-database.vercel.app)
 
 ![Preview](https://i.imgur.com/O89eAYp.png)
 
