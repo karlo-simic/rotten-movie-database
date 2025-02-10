@@ -5,7 +5,7 @@ const VoteAverage = ({ voteAverage, className }) => {
   return (
     <div className={cx(c.voteAverage, className)}>
       <div>
-        <h1>{voteAverage}</h1>
+        <h1>{voteAverage.toFixed(1)}</h1>
       </div>
       <p>RMDb</p>
     </div>
